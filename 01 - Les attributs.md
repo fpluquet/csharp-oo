@@ -198,6 +198,8 @@ Console.WriteLine(p2.numeroTelephone);
 Console.WriteLine(p3.numeroTelephone);
 ``` 
 
+</details>
+
 ## Exercice 5
 
 Créez une classe ```Adresse``` avec les attributs ```numeroRue```, ```nomRue``` et ```codePostal```.
