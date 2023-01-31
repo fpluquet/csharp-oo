@@ -22,9 +22,9 @@ Par exemple, la classe suivante définit une classe `Voiture` avec 3 attributs :
 
 ```csharp
 class Voiture {
-    string marque = "Peugeot";
-    int anneeConstruction = 2022;
-    float consommation = 1.8;
+    string Marque = "Peugeot";
+    int AnneeConstruction = 2022;
+    float Consommation = 1.8;
 }
 ```
 
@@ -36,24 +36,24 @@ Pour pouvoir utiliser des attributs sur des objets, il faut d'abord créer une i
 Voiture v = new Voiture();
 ```
 
-Une fois l'instance créée, on peut accéder aux attributs de l'objet en utilisant le point `.`. Par exemple, pour accéder à l'attribut `marque` de l'objet `v`, on utilise la syntaxe suivante :
+Une fois l'instance créée, on peut accéder aux attributs de l'objet en utilisant le point `.`. Par exemple, pour accéder à l'attribut `Marque` de l'objet `v`, on utilise la syntaxe suivante :
 
 ```csharp
-v.marque
+v.Marque
 ```
 
-On peut modifier la valeur d'un attribut en utilisant l'opérateur d'affectation `=`. Par exemple, pour modifier la valeur de l'attribut `marque` de l'objet `v`, on utilise la syntaxe suivante :
+On peut modifier la valeur d'un attribut en utilisant l'opérateur d'affectation `=`. Par exemple, pour modifier la valeur de l'attribut `Marque` de l'objet `v`, on utilise la syntaxe suivante :
 
 ```csharp
-v.marque = "Renault";
+v.Marque = "Renault";
 ```
 
 On peut alors afficher toutes les valeurs des attributs de l'objet `v` en utilisant la syntaxe suivante :
 
 ```csharp
-Console.WriteLine(v.marque);
-Console.WriteLine(v.anneeConstruction);
-Console.WriteLine(v.consommation);
+Console.WriteLine(v.Marque);
+Console.WriteLine(v.AnneeConstruction);
+Console.WriteLine(v.Consommation);
 ```
 
 
@@ -61,7 +61,7 @@ Console.WriteLine(v.consommation);
 
 ## Exercice 1
 
-Créez une classe ```Personne``` avec les attributs ```nom```, ```age``` et ```adresse```. Initialisez les valeurs en définissant directement les valeurs par défaut. Affichez les valeurs de tous ses attributs.
+Créez une classe ```Personne``` avec les attributs ```Nom```, ```Age``` et ```Adresse```. Initialisez les valeurs en définissant directement les valeurs par défaut. Affichez les valeurs de tous ses attributs.
 
 
 <details>
@@ -69,14 +69,14 @@ Créez une classe ```Personne``` avec les attributs ```nom```, ```age``` et ```a
 
 ```csharp
 class Personne {
-    string nom = "Dupont";
-    int age = 20;
-    string adresse = "1 rue de la paix";
+    string Nom = "Dupont";
+    int Age = 20;
+    string Adresse = "1 rue de la paix";
 }
 Personne p = new Personne();
-Console.WriteLine(p.nom);
-Console.WriteLine(p.age);
-Console.WriteLine(p.adresse);
+Console.WriteLine(p.Nom);
+Console.WriteLine(p.Age);
+Console.WriteLine(p.Adresse);
 ```
 
 </details>
@@ -90,34 +90,34 @@ Créez plusieurs objets de la classe ```Personne``` et affichez ensuite les vale
 
 ```csharp
 class Personne {
-    string nom = "Dupont";
-    int age = 20;
-    string adresse = "1 rue de la paix";
+    string Nom = "Dupont";
+    int Age = 20;
+    string Adresse = "1 rue de la paix";
 }
 Personne p1 = new Personne();
 Personne p2 = new Personne();
 Personne p3 = new Personne();
-Console.WriteLine(p1.nom);
-Console.WriteLine(p1.age);
-Console.WriteLine(p1.adresse);
-Console.WriteLine(p2.nom);
-Console.WriteLine(p2.age);
-Console.WriteLine(p2.adresse);
-Console.WriteLine(p3.nom);
-Console.WriteLine(p3.age);
-Console.WriteLine(p3.adresse);
-p1.nom = "Dupond";
-p1.age = 30;
-p1.adresse = "2 rue de la paix";
-Console.WriteLine(p1.nom);
-Console.WriteLine(p1.age);
-Console.WriteLine(p1.adresse);
-Console.WriteLine(p2.nom);
-Console.WriteLine(p2.age);
-Console.WriteLine(p2.adresse);
-Console.WriteLine(p3.nom);
-Console.WriteLine(p3.age);
-Console.WriteLine(p3.adresse);
+Console.WriteLine(p1.Nom);
+Console.WriteLine(p1.Age);
+Console.WriteLine(p1.Adresse);
+Console.WriteLine(p2.Nom);
+Console.WriteLine(p2.Age);
+Console.WriteLine(p2.Adresse);
+Console.WriteLine(p3.Nom);
+Console.WriteLine(p3.Age);
+Console.WriteLine(p3.Adresse);
+p1.Nom = "Dupond";
+p1.Age = 30;
+p1.Adresse = "2 rue de la paix";
+Console.WriteLine(p1.Nom);
+Console.WriteLine(p1.Age);
+Console.WriteLine(p1.Adresse);
+Console.WriteLine(p2.Nom);
+Console.WriteLine(p2.Age);
+Console.WriteLine(p2.Adresse);
+Console.WriteLine(p3.Nom);
+Console.WriteLine(p3.Age);
+Console.WriteLine(p3.Adresse);
 ```
 
 On peut remarquer que les valeurs des attributs de l'objet ```p2``` et ```p3``` n'ont pas été modifiées.
@@ -134,32 +134,32 @@ Créez plusieurs objets de la classe ```Personne``` et modifiez leurs valeurs di
 
 ```csharp
 class Personne {
-    string nom = "Dupont";
-    int age = 20;
-    string adresse = "1 rue de la paix";
+    string Nom = "Dupont";
+    int Age = 20;
+    string Adresse = "1 rue de la paix";
 }
 Personne p1 = new Personne();
 Personne p2 = new Personne();
 Personne p3 = new Personne();
-p1.nom = "Dupond";
-p1.age = 30;
-p1.adresse = "2 rue de la paix";
-p2.nom = "Durand";
-p2.age = 40;
-p2.adresse = "3 rue de la paix";
-p3.nom = "Martin";
-p3.age = 50;
-p3.adresse = "4 rue de la paix";
+p1.Nom = "Dupond";
+p1.Age = 30;
+p1.Adresse = "2 rue de la paix";
+p2.Nom = "Durand";
+p2.Age = 40;
+p2.Adresse = "3 rue de la paix";
+p3.Nom = "Martin";
+p3.Age = 50;
+p3.Adresse = "4 rue de la paix";
 
-Console.WriteLine(p1.nom);
-Console.WriteLine(p1.age);
-Console.WriteLine(p1.adresse);
-Console.WriteLine(p2.nom);
-Console.WriteLine(p2.age);
-Console.WriteLine(p2.adresse);
-Console.WriteLine(p3.nom);
-Console.WriteLine(p3.age);
-Console.WriteLine(p3.adresse);
+Console.WriteLine(p1.Nom);
+Console.WriteLine(p1.Age);
+Console.WriteLine(p1.Adresse);
+Console.WriteLine(p2.Nom);
+Console.WriteLine(p2.Age);
+Console.WriteLine(p2.Adresse);
+Console.WriteLine(p3.Nom);
+Console.WriteLine(p3.Age);
+Console.WriteLine(p3.Adresse);
 ```
 
 </details>
@@ -173,25 +173,25 @@ Ajoutez à la classe un nouvel attribut ```numeroTelephone``` à la classe ```Pe
 
 ```csharp
 class Personne {
-    string nom = "Dupont";
-    int age = 20;
-    string adresse = "1 rue de la paix";
+    string Nom = "Dupont";
+    int Age = 20;
+    string Adresse = "1 rue de la paix";
     string numeroTelephone = "0123456789";
 }
 Personne p1 = new Personne();
 Personne p2 = new Personne();
 Personne p3 = new Personne();
-p1.nom = "Dupond";
-p1.age = 30;
-p1.adresse = "2 rue de la paix";
+p1.Nom = "Dupond";
+p1.Age = 30;
+p1.Adresse = "2 rue de la paix";
 p1.numeroTelephone = "0123456788";
-p2.nom = "Durand";
-p2.age = 40;
-p2.adresse = "3 rue de la paix";
+p2.Nom = "Durand";
+p2.Age = 40;
+p2.Adresse = "3 rue de la paix";
 p2.numeroTelephone = "0123456787";
-p3.nom = "Martin";
-p3.age = 50;
-p3.adresse = "4 rue de la paix";
+p3.Nom = "Martin";
+p3.Age = 50;
+p3.Adresse = "4 rue de la paix";
 p3.numeroTelephone = "0123456786";
 Console.WriteLine(p1.numeroTelephone);
 Console.WriteLine(p2.numeroTelephone);
@@ -202,8 +202,8 @@ Console.WriteLine(p3.numeroTelephone);
 
 ## Exercice 5
 
-Créez une classe ```Adresse``` avec les attributs ```numeroRue```, ```nomRue``` et ```codePostal```.
-Créez une classe ```Personne``` avec les attributs ```nom```, ```age``` et ```adresse``` (de type ```Adresse```). Initialisez les valeurs en utilisant le constructeur.
+Créez une classe ```Adresse``` avec les attributs ```NumeroRue```, ```NomRue``` et ```CodePostal```.
+Créez une classe ```Personne``` avec les attributs ```Nom```, ```Age``` et ```Adresse``` (de type ```Adresse```). Initialisez les valeurs en utilisant le constructeur.
 Créez plusieurs objets de la classe ```Personne``` avec des valeurs différentes pour chaque propriété.
 Affichez ensuite les valeurs de chaque propriété pour chaque objet ```Personne```, y compris les propriétés de l'objet ```Adresse``` associé.
 Modifiez la valeur d'une des propriétés de l'objet ```Adresse``` associé à un objet ```Personne``` et affichez à nouveau les détails pour cet objet ```Personne```.
@@ -213,105 +213,105 @@ Modifiez la valeur d'une des propriétés de l'objet ```Adresse``` associé à u
 
 ```csharp
 class Adresse {
-    int numeroRue;
-    string nomRue;
-    string codePostal;
+    int NumeroRue;
+    string NomRue;
+    string CodePostal;
 }
 
 class Personne {
-    string nom;
-    int age;
-    Adresse adresse;
+    string Nom;
+    int Age;
+    Adresse Adresse;
 }
 
 Adresse a1 = new Adresse();
-a1.numeroRue = 1;
-a1.nomRue = "rue de la paix";
-a1.codePostal = "75000";
+a1.NumeroRue = 1;
+a1.NomRue = "rue de la paix";
+a1.CodePostal = "75000";
 
 Personne p1 = new Personne();
-p1.nom = "Dupont";
-p1.age = 20;
-p1.adresse = a1;
+p1.Nom = "Dupont";
+p1.Age = 20;
+p1.Adresse = a1;
 
-Console.WriteLine(p1.nom);
-Console.WriteLine(p1.age);
-Console.WriteLine(p1.adresse.numeroRue);
-Console.WriteLine(p1.adresse.nomRue);
-Console.WriteLine(p1.adresse.codePostal);
+Console.WriteLine(p1.Nom);
+Console.WriteLine(p1.Age);
+Console.WriteLine(p1.Adresse.NumeroRue);
+Console.WriteLine(p1.Adresse.NomRue);
+Console.WriteLine(p1.Adresse.CodePostal);
 
-a1.numeroRue = 2;
+a1.NumeroRue = 2;
 
-Console.WriteLine(p1.nom);
-Console.WriteLine(p1.age);
-Console.WriteLine(p1.adresse.numeroRue);
-Console.WriteLine(p1.adresse.nomRue);
-Console.WriteLine(p1.adresse.codePostal);
+Console.WriteLine(p1.Nom);
+Console.WriteLine(p1.Age);
+Console.WriteLine(p1.Adresse.NumeroRue);
+Console.WriteLine(p1.Adresse.NomRue);
+Console.WriteLine(p1.Adresse.CodePostal);
 ```
 
 </details>
 
 ## Exercice 6
 
-Créez une classe ```Client``` avec les attributs ```nom```, ```prenom``` et ```adresse``` (de type ```Adresse```). Créez une classe ```CompteBancaire``` avec les attributs ```numeroCompte```, ```solde``` et ```client``` (de type ```Client```). Créez un ```Client``` et plusieurs ```CompteBancaire``` associé à ce client.  Affichez les détails de chaque compte bancaire, y compris le numéro de rue de l'adresse du client du compte.
+Créez une classe ```Client``` avec les attributs ```Nom```, ```Prenom``` et ```Adresse``` (de type ```Adresse```). Créez une classe ```CompteBancaire``` avec les attributs ```NumeroCompte```, ```Solde``` et ```client``` (de type ```Client```). Créez un ```Client``` et plusieurs ```CompteBancaire``` associé à ce client.  Affichez les détails de chaque compte bancaire, y compris le numéro de rue de l'Adresse du client du compte.
 
 <details>
     <summary>Solution</summary>
 
 ```csharp
 class Adresse {
-    int numeroRue;
-    string nomRue;
-    string codePostal;
+    int NumeroRue;
+    string NomRue;
+    string CodePostal;
 }
 
 class Client {
-    string nom;
-    string prenom;
-    Adresse adresse;
+    string Nom;
+    string Prenom;
+    Adresse Adresse;
 }
 
 class CompteBancaire {
-    string numeroCompte;
-    double solde;
-    Client client;
+    string NumeroCompte;
+    double Solde;
+    Client Client;
 }
 
 Adresse a1 = new Adresse();
-a1.numeroRue = 1;
-a1.nomRue = "rue de la paix";
-a1.codePostal = "75000";
+a1.NumeroRue = 1;
+a1.NomRue = "rue de la paix";
+a1.CodePostal = "75000";
 
 Client c1 = new Client();
-c1.nom = "Dupont";
-c1.prenom = "Jean";
-c1.adresse = a1;
+c1.Nom = "Dupont";
+c1.Prenom = "Jean";
+c1.Adresse = a1;
 
 CompteBancaire cb1 = new CompteBancaire();
-cb1.numeroCompte = "123456789";
-cb1.solde = 1000;
-cb1.client = c1;
+cb1.NumeroCompte = "123456789";
+cb1.Solde = 1000;
+cb1.Client = c1;
 
 CompteBancaire cb2 = new CompteBancaire();
-cb2.numeroCompte = "987654321";
-cb2.solde = 2000;
-cb2.client = c1;
+cb2.NumeroCompte = "987654321";
+cb2.Solde = 2000;
+cb2.Client = c1;
 
-Console.WriteLine(cb1.numeroCompte);
-Console.WriteLine(cb1.solde);
-Console.WriteLine(cb1.client.nom);
-Console.WriteLine(cb1.client.prenom);
-Console.WriteLine(cb1.client.adresse.numeroRue);
-Console.WriteLine(cb1.client.adresse.nomRue);
-Console.WriteLine(cb1.client.adresse.codePostal);
+Console.WriteLine(cb1.NumeroCompte);
+Console.WriteLine(cb1.Solde);
+Console.WriteLine(cb1.Client.Nom);
+Console.WriteLine(cb1.Client.Prenom);
+Console.WriteLine(cb1.Client.Adresse.NumeroRue);
+Console.WriteLine(cb1.Client.Adresse.NomRue);
+Console.WriteLine(cb1.Client.Adresse.CodePostal);
 
-Console.WriteLine(cb2.numeroCompte);
-Console.WriteLine(cb2.solde);
-Console.WriteLine(cb2.client.nom);
-Console.WriteLine(cb2.client.prenom);
-Console.WriteLine(cb2.client.adresse.numeroRue);
-Console.WriteLine(cb2.client.adresse.nomRue);
-Console.WriteLine(cb2.client.adresse.codePostal);
+Console.WriteLine(cb2.NumeroCompte);
+Console.WriteLine(cb2.Solde);
+Console.WriteLine(cb2.Client.Nom);
+Console.WriteLine(cb2.Client.Prenom);
+Console.WriteLine(cb2.Client.Adresse.NumeroRue);
+Console.WriteLine(cb2.Client.Adresse.NomRue);
+Console.WriteLine(cb2.Client.Adresse.CodePostal);
 ```
 
 </details>
