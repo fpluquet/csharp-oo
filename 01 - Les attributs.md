@@ -174,7 +174,7 @@ class Personne {
 
 ## Exercice 4
 
-Ajoutez à la classe un nouvel attribut ```numeroTelephone``` à la classe ```Personne``` et affectez une valeur à ce nouvel attribut pour chaque objet ```Personne```. Affichez la valeur de ce nouvel attribut pour chaque objet ```Personne```.
+Ajoutez à la classe un nouvel attribut ```NumeroTelephone``` à la classe ```Personne``` et affectez une valeur à ce nouvel attribut pour chaque objet ```Personne```. Affichez la valeur de ce nouvel attribut pour chaque objet ```Personne```.
 
 <details>
     <summary>Solution</summary>
@@ -184,7 +184,7 @@ class Personne {
     public string Nom = "Dupont";
     public int Age = 20;
     public string Adresse = "1 rue de la paix";
-    public string numeroTelephone = "0123456789";
+    public string NumeroTelephone = "0123456789";
     
     public static void Main() {
         Personne p1 = new Personne();
@@ -193,18 +193,18 @@ class Personne {
         p1.Nom = "Dupond";
         p1.Age = 30;
         p1.Adresse = "2 rue de la paix";
-        p1.numeroTelephone = "0123456788";
+        p1.NumeroTelephone = "0123456788";
         p2.Nom = "Durand";
         p2.Age = 40;
         p2.Adresse = "3 rue de la paix";
-        p2.numeroTelephone = "0123456787";
+        p2.NumeroTelephone = "0123456787";
         p3.Nom = "Martin";
         p3.Age = 50;
         p3.Adresse = "4 rue de la paix";
-        p3.numeroTelephone = "0123456786";
-        Console.WriteLine(p1.numeroTelephone);
-        Console.WriteLine(p2.numeroTelephone);
-        Console.WriteLine(p3.numeroTelephone);
+        p3.NumeroTelephone = "0123456786";
+        Console.WriteLine(p1.NumeroTelephone);
+        Console.WriteLine(p2.NumeroTelephone);
+        Console.WriteLine(p3.NumeroTelephone);
     }
 }
 ``` 
