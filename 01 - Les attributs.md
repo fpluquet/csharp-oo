@@ -73,10 +73,10 @@ class Personne {
     public int Age = 20;
     public string Adresse = "1 rue de la paix";
     public static void Main() {
-	Personne p = new Personne();
-	Console.WriteLine(p.Nom);
-	Console.WriteLine(p.Age);
-	Console.WriteLine(p.Adresse);
+        Personne p = new Personne();
+        Console.WriteLine(p.Nom);
+        Console.WriteLine(p.Age);
+        Console.WriteLine(p.Adresse);
     }
 }
 ```
@@ -92,34 +92,37 @@ Créez plusieurs objets de la classe ```Personne``` et affichez ensuite les vale
 
 ```csharp
 class Personne {
-    string Nom = "Dupont";
-    int Age = 20;
-    string Adresse = "1 rue de la paix";
+    public string Nom = "Dupont";
+    public int Age = 20;
+    public string Adresse = "1 rue de la paix";
+
+    public static void Main() {
+        Personne p1 = new Personne();
+        Personne p2 = new Personne();
+        Personne p3 = new Personne();
+        Console.WriteLine(p1.Nom);
+        Console.WriteLine(p1.Age);
+        Console.WriteLine(p1.Adresse);
+        Console.WriteLine(p2.Nom);
+        Console.WriteLine(p2.Age);
+        Console.WriteLine(p2.Adresse);
+        Console.WriteLine(p3.Nom);
+        Console.WriteLine(p3.Age);
+        Console.WriteLine(p3.Adresse);
+        p1.Nom = "Dupond";
+        p1.Age = 30;
+        p1.Adresse = "2 rue de la paix";
+        Console.WriteLine(p1.Nom);
+        Console.WriteLine(p1.Age);
+        Console.WriteLine(p1.Adresse);
+        Console.WriteLine(p2.Nom);
+        Console.WriteLine(p2.Age);
+        Console.WriteLine(p2.Adresse);
+        Console.WriteLine(p3.Nom);
+        Console.WriteLine(p3.Age);
+        Console.WriteLine(p3.Adresse);
+    }
 }
-Personne p1 = new Personne();
-Personne p2 = new Personne();
-Personne p3 = new Personne();
-Console.WriteLine(p1.Nom);
-Console.WriteLine(p1.Age);
-Console.WriteLine(p1.Adresse);
-Console.WriteLine(p2.Nom);
-Console.WriteLine(p2.Age);
-Console.WriteLine(p2.Adresse);
-Console.WriteLine(p3.Nom);
-Console.WriteLine(p3.Age);
-Console.WriteLine(p3.Adresse);
-p1.Nom = "Dupond";
-p1.Age = 30;
-p1.Adresse = "2 rue de la paix";
-Console.WriteLine(p1.Nom);
-Console.WriteLine(p1.Age);
-Console.WriteLine(p1.Adresse);
-Console.WriteLine(p2.Nom);
-Console.WriteLine(p2.Age);
-Console.WriteLine(p2.Adresse);
-Console.WriteLine(p3.Nom);
-Console.WriteLine(p3.Age);
-Console.WriteLine(p3.Adresse);
 ```
 
 On peut remarquer que les valeurs des attributs de l'objet ```p2``` et ```p3``` n'ont pas été modifiées.
@@ -136,32 +139,35 @@ Créez plusieurs objets de la classe ```Personne``` et modifiez leurs valeurs di
 
 ```csharp
 class Personne {
-    string Nom = "Dupont";
-    int Age = 20;
-    string Adresse = "1 rue de la paix";
-}
-Personne p1 = new Personne();
-Personne p2 = new Personne();
-Personne p3 = new Personne();
-p1.Nom = "Dupond";
-p1.Age = 30;
-p1.Adresse = "2 rue de la paix";
-p2.Nom = "Durand";
-p2.Age = 40;
-p2.Adresse = "3 rue de la paix";
-p3.Nom = "Martin";
-p3.Age = 50;
-p3.Adresse = "4 rue de la paix";
+    public string Nom = "Dupont";
+    public int Age = 20;
+    public string Adresse = "1 rue de la paix";
 
-Console.WriteLine(p1.Nom);
-Console.WriteLine(p1.Age);
-Console.WriteLine(p1.Adresse);
-Console.WriteLine(p2.Nom);
-Console.WriteLine(p2.Age);
-Console.WriteLine(p2.Adresse);
-Console.WriteLine(p3.Nom);
-Console.WriteLine(p3.Age);
-Console.WriteLine(p3.Adresse);
+    public static void Main() {
+        Personne p1 = new Personne();
+        Personne p2 = new Personne();
+        Personne p3 = new Personne();
+        p1.Nom = "Dupond";
+        p1.Age = 30;
+        p1.Adresse = "2 rue de la paix";
+        p2.Nom = "Durand";
+        p2.Age = 40;
+        p2.Adresse = "3 rue de la paix";
+        p3.Nom = "Martin";
+        p3.Age = 50;
+        p3.Adresse = "4 rue de la paix";
+
+        Console.WriteLine(p1.Nom);
+        Console.WriteLine(p1.Age);
+        Console.WriteLine(p1.Adresse);
+        Console.WriteLine(p2.Nom);
+        Console.WriteLine(p2.Age);
+        Console.WriteLine(p2.Adresse);
+        Console.WriteLine(p3.Nom);
+        Console.WriteLine(p3.Age);
+        Console.WriteLine(p3.Adresse);
+    }
+}
 ```
 
 </details>
@@ -175,29 +181,32 @@ Ajoutez à la classe un nouvel attribut ```numeroTelephone``` à la classe ```Pe
 
 ```csharp
 class Personne {
-    string Nom = "Dupont";
-    int Age = 20;
-    string Adresse = "1 rue de la paix";
-    string numeroTelephone = "0123456789";
+    public string Nom = "Dupont";
+    public int Age = 20;
+    public string Adresse = "1 rue de la paix";
+    public string numeroTelephone = "0123456789";
+    
+    public static void Main() {
+        Personne p1 = new Personne();
+        Personne p2 = new Personne();
+        Personne p3 = new Personne();
+        p1.Nom = "Dupond";
+        p1.Age = 30;
+        p1.Adresse = "2 rue de la paix";
+        p1.numeroTelephone = "0123456788";
+        p2.Nom = "Durand";
+        p2.Age = 40;
+        p2.Adresse = "3 rue de la paix";
+        p2.numeroTelephone = "0123456787";
+        p3.Nom = "Martin";
+        p3.Age = 50;
+        p3.Adresse = "4 rue de la paix";
+        p3.numeroTelephone = "0123456786";
+        Console.WriteLine(p1.numeroTelephone);
+        Console.WriteLine(p2.numeroTelephone);
+        Console.WriteLine(p3.numeroTelephone);
+    }
 }
-Personne p1 = new Personne();
-Personne p2 = new Personne();
-Personne p3 = new Personne();
-p1.Nom = "Dupond";
-p1.Age = 30;
-p1.Adresse = "2 rue de la paix";
-p1.numeroTelephone = "0123456788";
-p2.Nom = "Durand";
-p2.Age = 40;
-p2.Adresse = "3 rue de la paix";
-p2.numeroTelephone = "0123456787";
-p3.Nom = "Martin";
-p3.Age = 50;
-p3.Adresse = "4 rue de la paix";
-p3.numeroTelephone = "0123456786";
-Console.WriteLine(p1.numeroTelephone);
-Console.WriteLine(p2.numeroTelephone);
-Console.WriteLine(p3.numeroTelephone);
 ``` 
 
 </details>
@@ -215,40 +224,44 @@ Modifiez la valeur d'une des propriétés de l'objet ```Adresse``` associé à u
 
 ```csharp
 class Adresse {
-    int NumeroRue;
-    string NomRue;
-    string CodePostal;
+    public int NumeroRue;
+    public string NomRue;
+    public string CodePostal;
 }
 
 class Personne {
-    string Nom;
-    int Age;
-    Adresse Adresse;
+    public string Nom;
+    public int Age;
+    public Adresse Adresse;
 }
 
-Adresse a1 = new Adresse();
-a1.NumeroRue = 1;
-a1.NomRue = "rue de la paix";
-a1.CodePostal = "75000";
+class Program {
+    static void Main() {
+        Adresse a1 = new Adresse();
+        a1.NumeroRue = 1;
+        a1.NomRue = "rue de la paix";
+        a1.CodePostal = "75000";
 
-Personne p1 = new Personne();
-p1.Nom = "Dupont";
-p1.Age = 20;
-p1.Adresse = a1;
+        Personne p1 = new Personne();
+        p1.Nom = "Dupont";
+        p1.Age = 20;
+        p1.Adresse = a1;
 
-Console.WriteLine(p1.Nom);
-Console.WriteLine(p1.Age);
-Console.WriteLine(p1.Adresse.NumeroRue);
-Console.WriteLine(p1.Adresse.NomRue);
-Console.WriteLine(p1.Adresse.CodePostal);
+        Console.WriteLine(p1.Nom);
+        Console.WriteLine(p1.Age);
+        Console.WriteLine(p1.Adresse.NumeroRue);
+        Console.WriteLine(p1.Adresse.NomRue);
+        Console.WriteLine(p1.Adresse.CodePostal);
 
-a1.NumeroRue = 2;
+        a1.NumeroRue = 2;
 
-Console.WriteLine(p1.Nom);
-Console.WriteLine(p1.Age);
-Console.WriteLine(p1.Adresse.NumeroRue);
-Console.WriteLine(p1.Adresse.NomRue);
-Console.WriteLine(p1.Adresse.CodePostal);
+        Console.WriteLine(p1.Nom);
+        Console.WriteLine(p1.Age);
+        Console.WriteLine(p1.Adresse.NumeroRue);
+        Console.WriteLine(p1.Adresse.NomRue);
+        Console.WriteLine(p1.Adresse.CodePostal);
+    }
+}
 ```
 
 </details>
@@ -262,58 +275,62 @@ Créez une classe ```Client``` avec les attributs ```Nom```, ```Prenom``` et ```
 
 ```csharp
 class Adresse {
-    int NumeroRue;
-    string NomRue;
-    string CodePostal;
+    public int NumeroRue;
+    public string NomRue;
+    public string CodePostal;
 }
 
 class Client {
-    string Nom;
-    string Prenom;
-    Adresse Adresse;
+    public string Nom;
+    public string Prenom;
+    public Adresse Adresse;
 }
 
 class CompteBancaire {
-    string NumeroCompte;
-    double Solde;
-    Client Client;
+    public string NumeroCompte;
+    public double Solde;
+    public Client Client;
 }
 
-Adresse a1 = new Adresse();
-a1.NumeroRue = 1;
-a1.NomRue = "rue de la paix";
-a1.CodePostal = "75000";
+class Program {
+    public static void Main() {
+        Adresse a1 = new Adresse();
+        a1.NumeroRue = 1;
+        a1.NomRue = "rue de la paix";
+        a1.CodePostal = "75000";
 
-Client c1 = new Client();
-c1.Nom = "Dupont";
-c1.Prenom = "Jean";
-c1.Adresse = a1;
+        Client c1 = new Client();
+        c1.Nom = "Dupont";
+        c1.Prenom = "Jean";
+        c1.Adresse = a1;
 
-CompteBancaire cb1 = new CompteBancaire();
-cb1.NumeroCompte = "123456789";
-cb1.Solde = 1000;
-cb1.Client = c1;
+        CompteBancaire cb1 = new CompteBancaire();
+        cb1.NumeroCompte = "123456789";
+        cb1.Solde = 1000;
+        cb1.Client = c1;
 
-CompteBancaire cb2 = new CompteBancaire();
-cb2.NumeroCompte = "987654321";
-cb2.Solde = 2000;
-cb2.Client = c1;
+        CompteBancaire cb2 = new CompteBancaire();
+        cb2.NumeroCompte = "987654321";
+        cb2.Solde = 2000;
+        cb2.Client = c1;
 
-Console.WriteLine(cb1.NumeroCompte);
-Console.WriteLine(cb1.Solde);
-Console.WriteLine(cb1.Client.Nom);
-Console.WriteLine(cb1.Client.Prenom);
-Console.WriteLine(cb1.Client.Adresse.NumeroRue);
-Console.WriteLine(cb1.Client.Adresse.NomRue);
-Console.WriteLine(cb1.Client.Adresse.CodePostal);
+        Console.WriteLine(cb1.NumeroCompte);
+        Console.WriteLine(cb1.Solde);
+        Console.WriteLine(cb1.Client.Nom);
+        Console.WriteLine(cb1.Client.Prenom);
+        Console.WriteLine(cb1.Client.Adresse.NumeroRue);
+        Console.WriteLine(cb1.Client.Adresse.NomRue);
+        Console.WriteLine(cb1.Client.Adresse.CodePostal);
 
-Console.WriteLine(cb2.NumeroCompte);
-Console.WriteLine(cb2.Solde);
-Console.WriteLine(cb2.Client.Nom);
-Console.WriteLine(cb2.Client.Prenom);
-Console.WriteLine(cb2.Client.Adresse.NumeroRue);
-Console.WriteLine(cb2.Client.Adresse.NomRue);
-Console.WriteLine(cb2.Client.Adresse.CodePostal);
+        Console.WriteLine(cb2.NumeroCompte);
+        Console.WriteLine(cb2.Solde);
+        Console.WriteLine(cb2.Client.Nom);
+        Console.WriteLine(cb2.Client.Prenom);
+        Console.WriteLine(cb2.Client.Adresse.NumeroRue);
+        Console.WriteLine(cb2.Client.Adresse.NomRue);
+        Console.WriteLine(cb2.Client.Adresse.CodePostal);
+    }
+}
 ```
 
 </details>
