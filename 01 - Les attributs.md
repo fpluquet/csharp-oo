@@ -268,7 +268,7 @@ class Program {
 
 ## Exercice 6
 
-Créez une classe ```Client``` avec les attributs ```Nom```, ```Prenom``` et ```Adresse``` (de type ```Adresse```). Créez une classe ```CompteBancaire``` avec les attributs ```NumeroCompte```, ```Solde``` et ```client``` (de type ```Client```). Créez un ```Client``` et plusieurs ```CompteBancaire``` associé à ce client.  Affichez les détails de chaque compte bancaire, y compris le numéro de rue de l'Adresse du client du compte.
+Créez une classe ```Client``` avec les attributs ```Nom```, ```Prenom``` et ```Adresse``` (de type ```Adresse```). Créez une classe ```CompteBancaire``` avec les attributs ```NumeroCompte```, ```Solde``` et ```Client``` (de type ```Client```). Créez un ```Client``` et plusieurs ```CompteBancaire``` associés à ce client.  Affichez les détails de chaque compte bancaire, y compris le numéro de rue de l'Adresse du client du compte.
 
 <details>
     <summary>Solution</summary>
