@@ -72,6 +72,9 @@ class Personne {
     public string Nom = "Dupont";
     public int Age = 20;
     public string Adresse = "1 rue de la paix";
+}
+
+class Program {
     public static void Main() {
         Personne p = new Personne();
         Console.WriteLine(p.Nom);
@@ -95,7 +98,9 @@ class Personne {
     public string Nom = "Dupont";
     public int Age = 20;
     public string Adresse = "1 rue de la paix";
+}
 
+class Program {
     public static void Main() {
         Personne p1 = new Personne();
         Personne p2 = new Personne();
@@ -142,7 +147,9 @@ class Personne {
     public string Nom = "Dupont";
     public int Age = 20;
     public string Adresse = "1 rue de la paix";
+}
 
+class Program {
     public static void Main() {
         Personne p1 = new Personne();
         Personne p2 = new Personne();
@@ -185,7 +192,9 @@ class Personne {
     public int Age = 20;
     public string Adresse = "1 rue de la paix";
     public string NumeroTelephone = "0123456789";
-    
+}
+
+class Program {
     public static void Main() {
         Personne p1 = new Personne();
         Personne p2 = new Personne();
