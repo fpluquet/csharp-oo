@@ -25,12 +25,12 @@ class Program
         calculette1.afficher(); // doit afficher 0
 
         calculette2.afficher(); // doit afficher 15
-        calculette2.execute(multiplierPar: 3);
+        calculette2.executer(multiplierPar: 3);
         calculette2.afficher(); // doit afficher 45
-        calculette2.execute(soustraire: 7);
+        calculette2.executer(soustraire: 7);
         calculette2.afficher(); // doit afficher 38
-        calculette2.execute(ajouter: 9);
-        calculette2.afficher(); // doit afficher 46
+        calculette2.executer(ajouter: 9);
+        calculette2.afficher(); // doit afficher 47
     }
 }
 ```
