@@ -39,7 +39,7 @@ public class Guerrier : Personnage
     public override void Attaquer(Personnage cible)
     {
         Console.WriteLine($"{Nom} attaque {cible.Nom} avec son épée !");
-        if (!this.PeutSeProtéger(cible))
+        if (!cible.PeutSeProtéger(this))
         {
             cible.PointsDeVie -= 20;
             Console.WriteLine($"{cible.Nom} perd 20 points de vie. Points de vie restants : {cible.PointsDeVie}");
@@ -59,7 +59,7 @@ public class Mage : Personnage
     public override void Attaquer(Personnage cible)
     {
         Console.WriteLine($"{Nom} lance une boule de feu sur {cible.Nom} !");
-        if (!this.PeutSeProtéger(cible))
+        if (!cible.PeutSeProtéger(this))
         {
             cible.PointsDeVie -= 30;
             Console.WriteLine($"{cible.Nom} perd 30 points de vie. Points de vie restants : {cible.PointsDeVie}");
@@ -83,7 +83,7 @@ public class Archer : Personnage
     public override void Attaquer(Personnage cible)
     {
         Console.WriteLine($"{Nom} tire une flèche sur {cible.Nom} !");
-        if (this.PeutSeProtéger(cible))
+        if (cible.PeutSeProtéger(this))
         {
             Console.WriteLine($"{cible.Nom} se protège. Aucun dégât n'est infligé.");
             return;
@@ -106,7 +106,7 @@ class Program
         Personnage mage = new Mage("Gandalf");
         Personnage archer = new Archer("Legolas");
 
-        List<Personnage> personnages = new List<Personnage> { guerrier, mage, archer };
+        List<Personnage> personnages = new List<Personnage> { guerrier, archer, mage };
 
         AfficheVies(personnages);
 
