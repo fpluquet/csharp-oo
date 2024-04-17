@@ -230,7 +230,7 @@ foreach (IForme forme in formes)
 
 
 
-## Exercice 5
+## Exercice 4
 
 Implémentez l'interface `IComparable` pour les classes `Rectangle` et `Cercle` de l'exercice 2. L'ordre de tri doit être basé sur l'aire de la forme. Créez une liste de formes et triez-la. Affichez les formes triées.
 
