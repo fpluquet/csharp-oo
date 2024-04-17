@@ -63,6 +63,8 @@ class Program
 }
 ```
 
+</details>
+
 ## Exercice 2
 
 Créez une interface `IForme` avec une méthode `double CalculerAire()`.
@@ -155,6 +157,8 @@ class Program
     }
 }
 ```
+
+</details>
 
 ## Exercice 3
 
