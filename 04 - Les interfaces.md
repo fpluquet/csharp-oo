@@ -10,6 +10,8 @@ Créez deux classes `Chien` et `Chat` qui implémentent l'interface `IAnimal`, e
 
 Créez une classe `Program` avec une méthode `Main` qui crée une instance de `Chien` et une instance de `Chat` et qui appelle les méthodes `Manger` et `Dormir` pour chaque instance.
 
+Mettez ces deux instances dans un tableau d'`IAnimal` et appelez les méthodes `Manger` et `Dormir` pour chaque élément de la tableau.
+
 <details>
 <summary>Solution</summary>
 
@@ -59,6 +61,13 @@ class Program
         Chat chat = new Chat();
         chat.Manger();
         chat.Dormir();
+
+        IAnimal[] animaux = new IAnimal[] { chien, chat };
+        foreach (IAnimal animal in animaux)
+        {
+            animal.Manger();
+            animal.Dormir();
+        }        
     }
 }
 ```
