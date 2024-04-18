@@ -232,7 +232,7 @@ foreach (IForme forme in formes)
 
 ## Exercice 4
 
-Implémentez l'interface `IComparable` pour les classes `Rectangle` et `Cercle` de l'exercice 2. L'ordre de tri doit être basé sur l'aire de la forme. Créez une liste de formes et triez-la. Affichez les formes triées.
+Implémentez l'interface `IComparable` pour les classes `Rectangle` et `Cercle` de l'exercice 2. L'ordre de tri doit être basé sur l'aire de la forme. Créez une liste de rectangles et triez-la. Créez une liste de cercles et triez-la. Créez une liste de formes et triez-la. Affichez à chaque fois l'aire des formes triées.
 
 <details>
 <summary>Solution</summary>
@@ -240,20 +240,25 @@ Implémentez l'interface `IComparable` pour les classes `Rectangle` et `Cercle` 
 Voici le code à obtenir :
 
 ```csharp
-class Rectangle : IForme, IComparable<Rectangle>
+interface IForme : IComparable<IForme>
+{
+    double CalculerAire();
+}
+
+class Rectangle : IForme, IComparable<Rectangle>, IComparable<IForme>
 {
     public double Largeur { get; set; }
-    public double Hauteur { get; set; }
+    public double Longueur { get; set; }
 
-    public Rectangle(double largeur, double hauteur)
+    public Rectangle(double largeur, double longueur)
     {
         Largeur = largeur;
-        Hauteur = hauteur;
+        Longueur = longueur;
     }
 
     public double CalculerAire()
     {
-        return Largeur * Hauteur;
+        return Largeur * Longueur;
     }
 
     public int GetNbCôtés()
@@ -261,8 +266,10 @@ class Rectangle : IForme, IComparable<Rectangle>
         return 4;
     }
 
-    public int CompareTo(Rectangle other)
+    public int CompareTo(Rectangle? other) // permet de comparer des rectangles entre eux
     {
+        if (other == null) return 1; // on considère que si other est null, this est 'plus grand'
+        Console.WriteLine("Dans le Rectangle>>CompareTo(Rectangle)");
         return CalculerAire().CompareTo(other.CalculerAire());
         // on pourrait aussi l'écrire comme ça
         // int monAire = this.CalculerAire();
@@ -274,9 +281,15 @@ class Rectangle : IForme, IComparable<Rectangle>
         // // ici on sait forcément que monAire > autreAire
         // return 1
     }
+    public int CompareTo(IForme? other) // permet de comparer des formes entre elles
+    {
+        if (other == null) return 1; // on considère que si other est null, this est 'plus grand'
+        Console.WriteLine("Dans le Rectangle>>CompareTo(IForme)");
+        return CalculerAire().CompareTo(other.CalculerAire());
+    }
 }
 
-class Cercle : IForme, IComparable<Cercle>
+    class Cercle : IForme, IComparable<Cercle>, IComparable<IForme>
 {
     public double Rayon { get; set; }
 
@@ -295,8 +308,17 @@ class Cercle : IForme, IComparable<Cercle>
         return 0;
     }
 
-    public int CompareTo(Cercle other)
+    public int CompareTo(Cercle? other) // permet de comparer des cercles entre eux
     {
+        if (other == null) return 1; // on considère que si other est null, this est 'plus grand'
+        Console.WriteLine("Dans le Cercle>>CompareTo(Cercle)");
+        return CalculerAire().CompareTo(other.CalculerAire());
+    }
+
+    public int CompareTo(IForme? other) // permet de comparer des formes entre elles
+    {
+        if (other == null) return 1; // on considère que si other est null, this est 'plus grand'
+        Console.WriteLine("Dans le Cercle>>CompareTo(IForme)");
         return CalculerAire().CompareTo(other.CalculerAire());
     }
 }
@@ -306,9 +328,24 @@ class Program
     public static void Main()
     {
         Rectangle rectangle1 = new Rectangle(2, 3);
-        Rectangle rectangle2 = new Rectangle(3, 4);
-        Cercle cercle1 = new Cercle(4);
-        Cercle cercle2 = new Cercle(5);
+        Rectangle rectangle2 = new Rectangle(8, 9);
+        Cercle cercle1 = new Cercle(5);
+        Cercle cercle2 = new Cercle(2);
+
+        List<Rectangle> rectangles = new List<Rectangle> { rectangle1, rectangle2 };
+        rectangles.Sort();
+        foreach (Rectangle rectangle in rectangles)
+        {
+            Console.WriteLine(rectangle.CalculerAire());
+        }
+
+        List<Cercle> cercles = new List<Cercle> { cercle1, cercle2 };
+        cercles.Sort();
+
+        foreach (Cercle cercle in cercles)
+        {
+            Console.WriteLine(cercle.CalculerAire());
+        }
 
         List<IForme> formes = new List<IForme> { rectangle1, rectangle2, cercle1, cercle2 };
         formes.Sort();
@@ -322,4 +359,3 @@ class Program
 ```
 
 </details>
-
