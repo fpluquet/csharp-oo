@@ -115,7 +115,7 @@ class Rectangle : IForme
         Hauteur = hauteur;
     }
 
-    public override double CalculerAire()
+    public double CalculerAire()
     {
         return Largeur * Hauteur;
     }
@@ -135,7 +135,7 @@ class Cercle : IForme
         Rayon = rayon;
     }
 
-    public override double CalculerAire()
+    public double CalculerAire()
     {
         return Math.PI * Rayon * Rayon;
     }
