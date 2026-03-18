@@ -142,6 +142,116 @@ class Program
 3. Commentez le code pour expliquer ce qui se passe.
 4. Ajoutez un nouveau type de personnage, le ```Paladin```. Un paladin est un personnage qui peut se protéger contre les attaques de mages et d'archers. Un paladin ne peut pas se protéger contre les attaques de guerriers. Un paladin inflige 25 points de dégâts lorsqu'il attaque. Implémentez le code nécessaire pour que le programme fonctionne avec un paladin en plus dans les personnages.
 
+<details>
+<summary>Solution</summary>
+
+### Diagramme de classes de l'exercice
+
+```mermaid
+classDiagram
+    class Personnage {
+        <<abstract>>
+        +string Nom
+        +int PointsDeVie
+        +Personnage(string nom)
+        +Attaquer(Personnage cible)* void
+        +PeutSeProtéger(Personnage attaquant) bool «virtual»
+        +EstVivant() bool
+    }
+    class Guerrier {
+        +Guerrier(string nom)
+        +Attaquer(Personnage cible) void «override»
+    }
+    class Mage {
+        +Mage(string nom)
+        +Attaquer(Personnage cible) void «override»
+        +PeutSeProtéger(Personnage attaquant) bool «override»
+    }
+    class Archer {
+        +Archer(string nom)
+        +Attaquer(Personnage cible) void «override»
+        +PeutSeProtéger(Personnage attaquant) bool «override»
+    }
+    Personnage <|-- Guerrier
+    Personnage <|-- Mage
+    Personnage <|-- Archer
+```
+
+### Solution (question 4)
+
+```csharp
+public class Paladin : Personnage
+{
+    public Paladin(string nom) : base(nom) { }
+
+    public override void Attaquer(Personnage cible)
+    {
+        Console.WriteLine($"{Nom} frappe {cible.Nom} avec sa masse sacrée !");
+        if (!cible.PeutSeProtéger(this))
+        {
+            cible.PointsDeVie -= 25;
+            Console.WriteLine($"{cible.Nom} perd 25 points de vie. Points de vie restants : {cible.PointsDeVie}");
+        }
+        else
+        {
+            Console.WriteLine($"{cible.Nom} se protège. Aucun dégât n'est infligé.");
+        }
+    }
+
+    public override bool PeutSeProtéger(Personnage attaquant)
+    {
+        return attaquant is Mage || attaquant is Archer;
+    }
+}
+```
+
+Et dans le `Main` :
+
+```csharp
+Personnage paladin = new Paladin("Arthur");
+List<Personnage> personnages = new List<Personnage> { guerrier, archer, mage, paladin };
+```
+
+### Diagramme de classes de la solution
+
+```mermaid
+classDiagram
+    class Personnage {
+        <<abstract>>
+        +string Nom
+        +int PointsDeVie
+        +Personnage(string nom)
+        +Attaquer(Personnage cible)* void
+        +PeutSeProtéger(Personnage attaquant) bool «virtual»
+        +EstVivant() bool
+    }
+    class Guerrier {
+        +Guerrier(string nom)
+        +Attaquer(Personnage cible) void «override»
+    }
+    class Mage {
+        +Mage(string nom)
+        +Attaquer(Personnage cible) void «override»
+        +PeutSeProtéger(Personnage attaquant) bool «override»
+    }
+    class Archer {
+        +Archer(string nom)
+        +Attaquer(Personnage cible) void «override»
+        +PeutSeProtéger(Personnage attaquant) bool «override»
+    }
+    class Paladin {
+        +Paladin(string nom)
+        +Attaquer(Personnage cible) void «override»
+        +PeutSeProtéger(Personnage attaquant) bool «override»
+    }
+    Personnage <|-- Guerrier
+    Personnage <|-- Mage
+    Personnage <|-- Archer
+    Personnage <|-- Paladin
+```
+
+</details>
+
 ## Exercice 2
 
 Soit le code suivant :
